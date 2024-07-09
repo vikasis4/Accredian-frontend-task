@@ -27,7 +27,7 @@ const Modal = ({ closeModal }) => {
       }
       if (!ready) return alert("Length of all columns should be grater than 3");
       setLoading(true)
-      await axios.post('http://localhost:3001/api/postData', data).then((res) => {
+      await axios.post('https://accredian-backend-task-7uv0.onrender.com/api/postData', data).then((res) => {
         if (res.data.status) {
           closeModal();
         };
